@@ -2,9 +2,11 @@ import React from 'react';
 import './rating.css';
 
 export default function Rating(props) {
-  const stars = [0,0,0,0,0];
-  stars.fill(<span>&#9733;</span>, 0, props.value);
-  stars.fill(<span>&#9734;</span>, props.value, 5);
+  const stars = [0,0,0,0,0]
+    .map((_, i) => i < props.value
+      ? <span key={i}>&#9733;</span>
+      : <span key={i}>&#9734;</span>
+    );
   return (
     <div className="rating">
       {stars}
