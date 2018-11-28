@@ -9,4 +9,7 @@ In the static version of the app the components are built without any user inter
 ## With State
 Contains a basic state passed as props around the app. No interactivity.
 
+## With interactivity
+Event handlers are added to components and callbacks are passed via props to the components that need them.
+
 

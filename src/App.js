@@ -46,10 +46,25 @@ class App extends Component {
 
   }
 
+  setShowAddForm(show) {
+    this.setState({
+      showAddForm: show
+    });
+  }
+
+  addBookmark(bookmark) {
+    this.setState({
+      bookmarks: [...this.state.bookmarks, bookmark],
+      showAddForm: false
+    });
+  }
+
   render() {
     const page = this.state.showAddForm
-          ? <AddBookmark />
-          : <BookmarkApp bookmarks={this.state.bookmarks}/>; 
+          ? <AddBookmark 
+                 showForm={show => this.setShowAddForm(show)} 
+                 handleAdd={bookmark => this.addBookmark(bookmark)}/>
+          : <BookmarkApp bookmarks={this.state.bookmarks} showForm={show => this.setShowAddForm(show)}/>; 
 
     return (
       <div className="App">
