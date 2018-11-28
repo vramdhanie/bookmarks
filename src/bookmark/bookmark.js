@@ -8,7 +8,12 @@ export default function Bookmark(props) {
     <div className="bookmark">
       <div className="bookmark__row">
         <div className="bookmark__title">
-          <a href={props.url} target="_blank">{props.title}</a>
+          <a 
+            href={props.url} 
+            target="_blank"
+            rel="noopener noreferrer">
+              {props.title}
+            </a>
         </div>
         <Rating value={props.rating}/>
       </div>      
