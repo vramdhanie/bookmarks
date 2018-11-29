@@ -7,8 +7,11 @@ class AddBookmark extends Component {
       <div className="addbookmark">
         <h2>Add Bookmark</h2>
         <form className="addbookmark__form">
+          <label htmlFor="title">Title:</label>
           <input type="text" name="title" id="title" placeholder="Title"/>
+          <label htmlFor="url">Url:</label>
           <input type="text" name="url" id="url" placeholder="url"/>
+          <label htmlFor="description">Description:</label>
           <textarea name="description" id="description" placeholder="description"/>
           <label htmlFor="rating">Rating: </label>
           <input 
